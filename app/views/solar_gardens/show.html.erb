@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @solar_garden.size %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @solar_garden.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @solar_garden.city %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @solar_garden.zip %>
+</p>
+
+<p>
+  <strong>Operator:</strong>
+  <%= @solar_garden.operator %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @solar_garden.contact_name %>
+</p>
+
+<p>
+  <strong>Contact phone:</strong>
+  <%= @solar_garden.contact_phone %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @solar_garden.contact_email %>
+</p>
+
+<%= link_to 'Edit', edit_solar_garden_path(@solar_garden) %> |
+<%= link_to 'Back', solar_gardens_path %>

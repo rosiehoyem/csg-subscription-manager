@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @subscriber.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @subscriber.last_name %>
+</p>
+
+<p>
+  <strong>Account number:</strong>
+  <%= @subscriber.account_number %>
+</p>
+
+<p>
+  <strong>Property address:</strong>
+  <%= @subscriber.property_address %>
+</p>
+
+<p>
+  <strong>Property city:</strong>
+  <%= @subscriber.property_city %>
+</p>
+
+<p>
+  <strong>Property state:</strong>
+  <%= @subscriber.property_state %>
+</p>
+
+<p>
+  <strong>Property zip:</strong>
+  <%= @subscriber.property_zip %>
+</p>
+
+<p>
+  <strong>Subscription size:</strong>
+  <%= @subscriber.subscription_size %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @subscriber.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @subscriber.phone %>
+</p>
+
+<p>
+  <strong>Secondary contact:</strong>
+  <%= @subscriber.secondary_contact %>
+</p>
+
+<p>
+  <strong>Secondary phone:</strong>
+  <%= @subscriber.secondary_phone %>
+</p>
+
+<p>
+  <strong>Secondary email:</strong>
+  <%= @subscriber.secondary_email %>
+</p>
+
+<p>
+  <strong>Payment details:</strong>
+  <%= @subscriber.payment_details %>
+</p>
+
+<%= link_to 'Edit', edit_subscriber_path(@subscriber) %> |
+<%= link_to 'Back', subscribers_path %>

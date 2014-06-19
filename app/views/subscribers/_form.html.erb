@@ -1,0 +1,73 @@
+<%= form_for(@subscriber) do |f| %>
+  <% if @subscriber.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+
+      <ul>
+      <% @subscriber.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :account_number %><br>
+    <%= f.text_field :account_number %>
+  </div>
+  <div class="field">
+    <%= f.label :property_address %><br>
+    <%= f.text_field :property_address %>
+  </div>
+  <div class="field">
+    <%= f.label :property_city %><br>
+    <%= f.text_field :property_city %>
+  </div>
+  <div class="field">
+    <%= f.label :property_state %><br>
+    <%= f.text_field :property_state %>
+  </div>
+  <div class="field">
+    <%= f.label :property_zip %><br>
+    <%= f.text_field :property_zip %>
+  </div>
+  <div class="field">
+    <%= f.label :subscription_size %><br>
+    <%= f.text_field :subscription_size %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :secondary_contact %><br>
+    <%= f.text_field :secondary_contact %>
+  </div>
+  <div class="field">
+    <%= f.label :secondary_phone %><br>
+    <%= f.text_field :secondary_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :secondary_email %><br>
+    <%= f.text_field :secondary_email %>
+  </div>
+  <div class="field">
+    <%= f.label :payment_details %><br>
+    <%= f.text_field :payment_details %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

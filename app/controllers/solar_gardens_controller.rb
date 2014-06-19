@@ -1,5 +1,6 @@
 class SolarGardensController < ApplicationController
   before_action :set_solar_garden, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index]
 
   # GET /solar_gardens
   # GET /solar_gardens.json

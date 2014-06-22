@@ -1,49 +1,71 @@
-<%= form_for(@solar_garden) do |f| %>
-  <% if @solar_garden.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@solar_garden.errors.count, "error") %> prohibited this solar_garden from being saved:</h2>
-
-      <ul>
-      <% @solar_garden.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<div class="row">
+  <div class="col-lg-8">
+    <div class="well bs-component">                  
+    <%= form_for @solar_garden, :html => {:class => "form-horizontal"} do |f| %>
+      <% if @solar_garden.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@solar_garden.errors.count, "error") %> prohibited this solar_garden from being saved:</h2>
+          <ul>
+          <% @solar_garden.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
+      <div class="form-group">
+        <%= f.label :size, class: "col-lg-2 control-label" %>
+        <div class="col-lg-10">
+        <%= f.text_field :size, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :address, class: "col-lg-2 control-label" %><br>
+        <div class="col-lg-10">
+        <%= f.text_field :address, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :city, class: "col-lg-2 control-label" %><br>
+        <div class="col-lg-10">
+        <%= f.text_field :city, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :zip, class: "col-lg-2 control-label" %><br>
+        <div class="col-lg-10">
+        <%= f.text_field :zip, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :operator, class: "col-lg-2 control-label" %><br>
+        <div class="col-lg-10">
+        <%= f.text_field :operator, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :contact_name, class: "col-lg-2 control-label" %><br>
+        <div class="col-lg-10">
+        <%= f.text_field :contact_name, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :contact_phone, class: "col-lg-2 control-label" %><br>
+        <div class="col-lg-10">
+        <%= f.text_field :contact_phone, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :contact_email, class: "col-lg-2 control-label" %><br>
+        <div class="col-lg-10">
+        <%= f.text_field :contact_email, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :size %><br>
-    <%= f.text_field :size %>
   </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :zip %><br>
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label :operator %><br>
-    <%= f.text_field :operator %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_name %><br>
-    <%= f.text_field :contact_name %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_phone %><br>
-    <%= f.text_field :contact_phone %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_email %><br>
-    <%= f.text_field :contact_email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
